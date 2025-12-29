@@ -414,7 +414,867 @@ ninja.data = [{
             window.location.href = "/blog/2015/formatting-and-links/";
           
         },
-      },{id: "books-the-godfather",
+      },{id: "books-policy-as-code",
+          title: 'Policy as Code',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/00883d8d-8688-4090-8570-8f4979bf5399/";
+            },},{id: "books-биохакинг-мозга",
+          title: 'Биохакинг мозга',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/03124ee0-32f5-4c86-8dfa-95c871ffc70f/";
+            },},{id: "books-how-to-be-a-capitalist-without-any-capital",
+          title: 'How to Be a Capitalist Without Any Capital',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/05cf2950-b028-4c23-ae9d-470098d6928a/";
+            },},{id: "books-три-товарища",
+          title: 'Три товарища',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/06e6ba13-a820-4fc1-b5c8-097181fda79d/";
+            },},{id: "books-defensive-security-handbook",
+          title: 'Defensive Security Handbook',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/088952d9-e2f4-4299-9195-03b7621eb747/";
+            },},{id: "books-practical-cloud-security",
+          title: 'Practical Cloud Security',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/09112540-a8c4-44ce-8d26-f6426cd6f32c/";
+            },},{id: "books-социальная-психология",
+          title: 'Социальная психология',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/09a6bb73-e67d-4535-9819-052dd12fbea7/";
+            },},{id: "books-the-beginning-of-infinity",
+          title: 'The Beginning of Infinity',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/0ae36641-84c3-4250-bb06-796d6d3fc192/";
+            },},{id: "books-а-в-ахо-д-э-хопкрофт-д-д-ульман",
+          title: 'А.В. Ахо, Д.Э.Хопкрофт, Д.Д.Ульман',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/1289ca05-cdb8-4727-bbdc-ba722371dd34/";
+            },},{id: "books-автостопом-по-галактике-ресторан-quot-у-конца-вселенной-quot",
+          title: 'Автостопом по галактике - Ресторан \&amp;quot;У конца Вселенной\&amp;quot;',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/1377ba9a-9790-44ff-ac12-eecddfbb8502/";
+            },},{id: "books-thinkertoys-a-handbook-of-creative-thinking-techniques",
+          title: 'Thinkertoys: A Handbook of Creative-Thinking Techniques',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/143c7a13-8400-4988-b084-cb8581231c6d/";
+            },},{id: "books-the-cybersecurity-manager-s-guide",
+          title: 'The Cybersecurity Manager’s Guide',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/1508a3c8-1152-430a-8a17-55a495b54fd5/";
+            },},{id: "books-архипелаг-гулаг-том-1",
+          title: 'Архипелаг ГУЛАГ. Том 1',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/1a28e68d-9a7f-48d5-9b33-88e8b06dba21/";
+            },},{id: "books-download-pdf-ebooks-org-1517001665ze2r1",
+          title: 'download-pdf-ebooks.org-1517001665Ze2R1',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/1e3de569-504a-4742-8e7d-c3f04bdee723/";
+            },},{id: "books-the-tipping-point-how-little-things-can-make-a-big-difference",
+          title: 'The Tipping Point: How Little Things Can Make a Big Difference',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/1e47293a-8ec5-44a3-b9bf-f31a21acbd48/";
+            },},{id: "books-building-a-cyber-risk-management-program",
+          title: 'Building a Cyber Risk Management Program',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/1f6b4957-1851-4435-aa21-591019c4b809/";
+            },},{id: "books-таинственный-остров",
+          title: 'Таинственный остров',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/239c1815-fcea-4a5e-9646-4652497a6847/";
+            },},{id: "books-путеводитель-автостопом-по-галактике",
+          title: 'Путеводитель “Автостопом по Галактике”',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/286ae6c8-dcfe-4845-932d-5b7e8502770a/";
+            },},{id: "books-burn-new-research-blows-the-lid-off-how-we-really-burn-calories-lose-weight-and-stay-healthy",
+          title: 'Burn: New Research Blows the Lid Off How We Really Burn Calories, Lose...',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2a4ea24d-db2c-4176-9cd6-25cb850986c8/";
+            },},{id: "books-spanish-short-stories-for-beginners-more-than-500-short-stories-in-10-easy-to-read-stories",
+          title: 'Spanish Short Stories For Beginners: More Than 500 Short Stories in 10 Easy...',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2b7b46b4-fd61-4f52-8503-3cc37a7e34bb/";
+            },},{id: "books-aws-reference-architecture-humanitec",
+          title: 'AWS Reference Architecture Humanitec',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2cb2757a-4275-4135-9efb-c7a76265f634/";
+            },},{id: "books-повелитель-мух",
+          title: 'Повелитель мух',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2d3379d4-5a1a-4541-85ae-82978c0aee67/";
+            },},{id: "books-hands-on-machine-learning-with-scikit-learn-keras-and-tensorflow",
+          title: 'Hands-on Machine Learning with Scikit-Learn, Keras, and TensorFlow',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/2da7839e-2aa0-4ecb-b7bf-2215fd2634e1/";
+            },},{id: "books-десять-негритят",
+          title: 'Десять негритят',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/3331b119-9e4c-4349-a799-fe3f05c8c880/";
+            },},{id: "books-adversary-emulation-with-mitre-att-amp-ck",
+          title: 'Adversary Emulation with MITRE ATT&amp;amp;CK',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/33d2b9cc-58ea-4a87-91a2-c1d311faf749/";
+            },},{id: "books-человек-в-футляре-сборник",
+          title: 'Человек в футляре (сборник)',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/38215c76-fd43-4eb5-af44-0d0abbcf1172/";
+            },},{id: "books-портрет-дориана-грея",
+          title: 'Портрет Дориана Грея',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/38815719-2afb-40ae-84a2-c9fb92aca174/";
+            },},{id: "books-daniels-39-running-formula",
+          title: 'Daniels&amp;#39; Running Formula',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/3aaf0ba4-1253-447c-9f27-b6167065bff8/";
+            },},{id: "books-если-хочешь-быть-счастливым",
+          title: 'ЕСЛИ ХОЧЕШЬ БЫТЬ СЧАСТЛИВЫМ',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/3ac938c3-dca7-4782-8b82-6902d1d37c25/";
+            },},{id: "books-остров-сокровищ",
+          title: 'Остров Сокровищ',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/3d5a8a9e-cb98-4365-9f37-c03c732caff2/";
+            },},{id: "books-курс-испанского",
+          title: 'Курс Испанского',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/3d7209a7-9f52-47ec-b3ce-9d6f4e0b3f11/";
+            },},{id: "books-inside-cyber-warfare",
+          title: 'Inside Cyber Warfare',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/3e06d29b-b32b-48cc-b725-dfb6bf3d6353/";
+            },},{id: "books-training-essentials-for-ultrarunning",
+          title: 'Training Essentials for Ultrarunning',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/3eb52a09-3052-4634-aa62-e0dc2e134c28/";
+            },},{id: "books-why-nations-fail",
+          title: 'Why nations fail',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/3fcee6c2-384c-4ed0-9cd4-99fdb5c2a5df/";
+            },},{id: "books-лекции-по-дискретной-математике",
+          title: 'Лекции по дискретной математике',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/403c6bbe-b680-48ec-97f6-6c88885358a2/";
+            },},{id: "books-стив-джобс",
+          title: 'Стив Джобс',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/4336580e-828f-4a18-9ffa-5635939f746a/";
+            },},{id: "books-practicing-trustworthy-machine-learning",
+          title: 'Practicing Trustworthy Machine Learning',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/44d77e1d-a26d-45e0-9b8e-2eb1d109619c/";
+            },},{id: "books-48-законов-власти",
+          title: '48 законов власти',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/4aad20d9-07d1-4fbe-b791-a6b1f7c880d0/";
+            },},{id: "books-мастер-и-маргарита",
+          title: 'Мастер и Маргарита',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/4aad42da-7fa6-4661-9f32-c4222d85fd51/";
+            },},{id: "books-эмма",
+          title: 'Эмма',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/4d5f08d6-a033-4661-99c1-bada0b51cfa8/";
+            },},{id: "books-tools-of-titans",
+          title: 'Tools of Titans',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/4d7cab0f-f0d1-478a-8bd4-a29730de2ff9/";
+            },},{id: "books-секреты-быстрого-плавания-для-пловцов-и-триатлетов",
+          title: 'Секреты быстрого плавания для пловцов и триатлетов',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/4db89afd-de54-47da-b08f-cff0d7e6678d/";
+            },},{id: "books-the-culture-map-breaking-through-the-invisible-boundaries-of-global-business",
+          title: 'The Culture Map: Breaking Through the Invisible Boundaries of Global Business',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/502f48b2-4d34-4eef-a6a5-e29e92a6bfe2/";
+            },},{id: "books-архипелаг-гулаг-том-3",
+          title: 'Архипелаг ГУЛАГ. Том 3',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/50f67f48-9237-43e8-9591-e80cfcfc1ff7/";
+            },},{id: "books-a-guide-to-changing-someone-else-s-beliefs",
+          title: 'A Guide to Changing Someone Else’s Beliefs',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/51a5345d-e417-4327-b113-7fc638da95c5/";
+            },},{id: "books-дети-капитана-гранта",
+          title: 'Дети капитана Гранта',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/53257e1e-60af-4ab4-9942-8478717f0f2e/";
+            },},{id: "books-awareness-a-de-mello-spirituality-conference-in-his-own-words",
+          title: 'Awareness - a de Mello spirituality conference in his own words',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/54b5ec7d-9e48-4057-afd6-3ef218b96720/";
+            },},{id: "books-игры-в-которые-играют-люди-люди-которые-играют-в-игры-сборник",
+          title: 'Игры, в которые играют люди. Люди, которые играют в игры (сборник)',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/54ce7893-7e97-4b12-a4d4-f66d4d79a335/";
+            },},{id: "books-черный-лебедь-под-знаком-непредсказуемости-сборник",
+          title: 'Черный лебедь. Под знаком непредсказуемости (сборник)',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/5534c5ec-3114-489b-9bb1-9ef7b92c015f/";
+            },},{id: "books-1984",
+          title: '1984',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/56e6efdf-e1b5-474d-ba1a-994f202c68b8/";
+            },},{id: "books-never-split-the-difference-negotiating-as-if-your-life-depended-on-it",
+          title: 'Never Split the Difference: Negotiating as if Your Life Depended on It',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/5744beb3-5221-4703-a9b7-9c6b49850f9c/";
+            },},{id: "books-вспоминая-моих-грустных-шлюх",
+          title: 'Вспоминая моих грустных шлюх',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/5a0d52db-5c17-45fc-9f84-15163cff9521/";
+            },},{id: "books-chemistry-all-in-one-for-dummies",
+          title: 'Chemistry All-in-One For Dummies®',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/5b0c2cda-36b0-429c-bb3f-1c21d601863c/";
+            },},{id: "books-автостопом-по-галактике-жизнь-вселенная-и-все-остальное",
+          title: 'Автостопом по галактике - Жизнь, Вселенная и все остальное',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/5c2ca9c1-8daa-4c31-bd40-a7ca1f5e6eb4/";
+            },},{id: "books-так-говорил-заратустра",
+          title: 'Так говорил Заратустра',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/5da3be6c-4453-4389-a94e-e92bc21d89b0/";
+            },},{id: "books-7-навыков-высокоэффективных-людей-мощные-инструменты-развития-личности",
+          title: '7 навыков высокоэффективных людей: Мощные инструменты развития личности',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/5e256a60-34d9-459a-bc55-cd4f053b5b96/";
+            },},{id: "books-приключения-тома-сойера-приключения-гекльберри-финна",
+          title: 'Приключения Тома Сойера. Приключения Гекльберри Финна',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/5fbdedc5-2909-4be2-9491-8c9ca1f7add2/";
+            },},{id: "books-война-и-мир",
+          title: 'Война и мир',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/62112f33-8a55-42ea-97a5-859e40b26769/";
+            },},{id: "books-0132642824-pdf",
+          title: '0132642824.pdf',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/63fbe293-d4e0-4db6-bb3c-b8e400714903/";
+            },},{id: "books-фунты-лиха-в-париже-и-лондоне",
+          title: 'Фунты лиха в Париже и Лондоне',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/65001426-ad90-462f-b69e-88e2277e119e/";
+            },},{id: "books-понедельник-начинается-в-субботу",
+          title: 'Понедельник начинается в субботу',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/676fdc13-5e3d-4590-a3e1-5cf6b944fa61/";
+            },},{id: "books-атомные-привычки-как-приобрести-хорошие-привычки-и-избавиться-от-плохих",
+          title: 'Атомные привычки. Как приобрести хорошие привычки и избавиться от плохих',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/6a42d79c-4e4b-426f-b79c-93e7cc672e5f/";
+            },},{id: "books-джентльмены-и-игроки",
+          title: 'Джентльмены и игроки',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/6b6390eb-3d90-4367-a61d-9fb5173afd79/";
+            },},{id: "books-the-cell-molecular-biology-of-sixth-edit",
+          title: 'THE CELL Molecular Biology of Sixth Edit',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/6cf3fc07-0b84-4725-b315-6652da35be8c/";
+            },},{id: "books-искра-жизни",
+          title: 'Искра жизни',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/6e014e81-9a5c-4897-9629-6153c0134505/";
+            },},{id: "books-анатомия-упражнений-на-растяжку",
+          title: 'Анатомия упражнений на растяжку',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/6e10cf30-f722-4f75-ba18-e04460832cbd/";
+            },},{id: "books-spanish",
+          title: 'Spanish',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/6ef82942-eabf-4f85-982d-2ecae8b986ce/";
+            },},{id: "books-автостопом-по-галактике-в-основном-безвредна",
+          title: 'Автостопом по галактике - В основном безвредна',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/6f7bf02f-aa8f-44e6-92f1-5f7fe9c72fe0/";
+            },},{id: "books-автостопом-по-галактике-всего-хорошего-и-спасибо-за-рыбу",
+          title: 'Автостопом по галактике - Всего хорошего, и спасибо за рыбу!',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/700dd550-1026-4b5e-80c1-5d65a6674289/";
+            },},{id: "books-hacker-culture-a-to-z",
+          title: 'Hacker Culture A to Z',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/70a01f4b-fcf9-4af1-ab91-d2e633c30832/";
+            },},{id: "books-15-когнитивных-искажений",
+          title: '15 когнитивных искажений',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/70b935ca-6951-486a-8a51-33d838f32f14/";
+            },},{id: "books-алхимик",
+          title: 'Алхимик',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/7231a44b-1354-4ff7-821f-06be6c967ecd/";
+            },},{id: "books-travels-in-hyperreality-harvest-book",
+          title: 'Travels in Hyperreality (Harvest Book)',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/730279e3-c158-4a91-9a63-0f5287d0740f/";
+            },},{id: "books-всадник-без-головы",
+          title: 'Всадник без головы',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/73778fed-d25c-4e17-9c82-9269c2126579/";
+            },},{id: "books-гордость-и-предубеждение",
+          title: 'Гордость и предубеждение',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/795bef6c-149a-4058-8702-68c0ec17d8d3/";
+            },},{id: "books-гении-и-аутсайдеры",
+          title: 'Гении и аутсайдеры',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/79c985b2-3fe5-4f6b-bbfb-24c97d741cd4/";
+            },},{id: "books-the-developer-s-playbook-for-large-language-model-security",
+          title: 'The Developer’s Playbook for Large Language Model Security',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/7c736bae-d0ad-4f14-9016-5fdc094508d2/";
+            },},{id: "books-learning-devsecops",
+          title: 'Learning DevSecOps',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/7dbaf947-8e28-4182-bc08-8bc745e0f265/";
+            },},{id: "books-психологическое-айкидо",
+          title: 'Психологическое айкидо',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/7ec2e6eb-93a8-4c4a-a74a-9167126df67b/";
+            },},{id: "books-библия-триатлета",
+          title: 'Библия триатлета',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/81e3d15f-5443-4282-8527-a460545620c9/";
+            },},{id: "books-zero-trust-networks",
+          title: 'Zero Trust Networks',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/841b80c8-43e6-4c65-a61d-f2ad12d2ae06/";
+            },},{id: "books-the-triathlete-39-s-training-bible",
+          title: 'The Triathlete&amp;#39;s Training Bible',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/844d4123-c1fc-47d7-8953-e1384d51df0d/";
+            },},{id: "books-красное-и-черное",
+          title: 'Красное и черное',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/8470a3e2-10ca-4c29-b7f9-72ea8a117ce8/";
+            },},{id: "books-утраченный-символ",
+          title: 'Утраченный символ',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/872771c6-9468-493f-8704-87c2f2c0344a/";
+            },},{id: "books-архипелаг-гулаг-том-2",
+          title: 'Архипелаг ГУЛАГ. Том 2',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/877d2964-0995-4f72-b457-01fe067ebae1/";
+            },},{id: "books-історії-про-життя-смерть-і-нейрохірургію",
+          title: 'Історії про життя, смерть і нейрохірургію',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/893781ba-26c7-4b26-8a51-96802f0fe484/";
+            },},{id: "books-на-западном-фронте-без-перемен",
+          title: 'На Западном фронте без перемен',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/89684e6e-3d13-4f5e-b1d4-bb99a17bb794/";
+            },},{id: "books-survival",
+          title: 'Survival',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/8b139b68-32f7-450c-b538-931a7014913f/";
+            },},{id: "books-systemantics-the-systems-bible",
+          title: 'SYSTEMANTICS. THE SYSTEMS BIBLE',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/8c4ed5e4-033b-4062-ace8-9ed806bb87a0/";
+            },},{id: "books-пикник-на-обочине",
+          title: 'Пикник на обочине',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/8ed5eb3b-3acc-4e45-8141-9a58463f78d4/";
+            },},{id: "books-clean-architecture-a-craftsman-39-s-guide-to-software-structure-and-design-robert-c-martin-series",
+          title: 'Clean Architecture: A Craftsman&amp;#39;s Guide to Software Structure and Design (Robert C. Martin...',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/8fb6b969-65db-479f-81a0-7e2e3db796c9/";
+            },},{id: "books-черная-риторика-власть-и-магия-слова",
+          title: 'Черная риторика. Власть и магия слова',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/929bf0e9-27fa-4a89-bde9-d40d006f7524/";
+            },},{id: "books-трудно-быть-богом",
+          title: 'Трудно быть богом',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/933a651f-796f-4fbc-a01e-a43934ac48e2/";
+            },},{id: "books-собачье-сердце",
+          title: 'Собачье сердце',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/93b1e4ca-6078-4b65-b4bb-844a1e0b08e1/";
+            },},{id: "books-ontological-designing",
+          title: 'Ontological Designing',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/9403bd88-2eeb-4f99-80ba-8143f0305ad7/";
+            },},{id: "books-мистецтво-війни",
+          title: 'Мистецтво війни',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/95264985-7d9b-4e49-86a0-b5a6edd3884d/";
+            },},{id: "books-think-and-grow-rich",
+          title: 'Think and Grow Rich',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/96156dfb-4d5d-4351-b67b-0d3fa9d96d9f/";
+            },},{id: "books-451-градус-по-фаренгейту",
+          title: '451 градус по Фаренгейту',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/9a34bfa8-124e-4939-b6f2-6fc01c363ca5/";
+            },},{id: "books-read-people-like-a-book",
+          title: 'Read People Like a Book',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/9a73028a-b0f3-4628-b187-666b8e0ce575/";
+            },},{id: "books-the-last-lecture",
+          title: 'The Last Lecture',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/9c7b884d-824b-47f2-b2dd-7e96221a13c8/";
+            },},{id: "books-современное-проектирование-на-с",
+          title: 'Современное проектирование на С++',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/9d06be94-8281-4671-be5b-8a63c67f1a7b/";
+            },},{id: "books-пятнадцатилетний-капитан",
+          title: 'Пятнадцатилетний капитан',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/9f032d24-c973-4a42-8407-45a45da6deed/";
+            },},{id: "books-новые-сложные-задачи-на-с",
+          title: 'Новые сложные задачи на С++',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/9f36f9d2-5018-4ef4-8fd3-c7a136f3a520/";
+            },},{id: "books-frank-herbert-39-s-dune-saga-collection-books-1-6",
+          title: 'Frank Herbert&amp;#39;s Dune Saga Collection: Books 1 - 6',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/9f683a7d-42a6-4003-b828-7ab5c1e2252e/";
+            },},{id: "books-структуры-данных-и-алгоритмы",
+          title: 'Структуры данных и алгоритмы',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/9fd43b74-77fa-41c3-9064-512f9e32caf8/";
+            },},{id: "books-старик-и-море",
+          title: 'Старик и море',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/a0a17a46-f9d9-4f9d-b72b-b4b9974d03e3/";
+            },},{id: "books-principles-life-and-work",
+          title: 'Principles: Life and Work',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/a0b6e3da-f191-4922-9e30-d7edc5b85d2e/";
+            },},{id: "books-як-ми-говоримо",
+          title: 'Як ми говоримо',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/a0fc43ec-6dba-4508-a70f-2c08690b4c60/";
+            },},{id: "books-network-programmability-and-automation",
+          title: 'Network Programmability and Automation',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/a12ee0b0-93ed-468e-bb65-394b9fae82a0/";
+            },},{id: "books-думай-медленно-решай-быстро",
+          title: 'Думай медленно… Решай быстро',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/a4b29eca-ee9c-499d-966c-ea89d6a2f7de/";
+            },},{id: "books-три-мушкетера",
+          title: 'Три мушкетера',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/a4c8063a-82aa-4b45-9485-e4103c74c131/";
+            },},{id: "books-над-кукушкиным-гнездом",
+          title: 'Над кукушкиным гнездом',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/a5a52014-67b5-409e-839b-76f9ee5b081b/";
+            },},{id: "books-время-жить-и-время-умирать",
+          title: 'Время жить и время умирать',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/a63b6359-aacd-43ce-bb30-ad44b0b815b5/";
+            },},{id: "books-триумфальная-арка",
+          title: 'Триумфальная арка',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/a73b57ac-07db-4cbb-bb5f-7eea57c71cc5/";
+            },},{id: "books-100m-money-models-how-to-make-money",
+          title: '$100M Money Models: How To Make Money',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/aa4a7284-2c6f-4391-b9db-c0a450b4ddc4/";
+            },},{id: "books-web-application-security",
+          title: 'Web Application Security',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/aaf61c88-4c68-4c06-bb62-99d9d881bc0e/";
+            },},{id: "books-the-four-steps-to-the-epiphany",
+          title: 'The Four Steps to the Epiphany',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/ac3a787c-5b7d-46f8-9d1a-4ce330d83bc7/";
+            },},{id: "books-аквариум",
+          title: 'Аквариум',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/ae660ded-1a5d-4356-bfb7-46da319c1a6c/";
+            },},{id: "books-сто-лет-одиночества",
+          title: 'Сто лет одиночества',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/ae75fbdf-36dd-43fb-8222-a3ba37b39ca2/";
+            },},{id: "books-the-gene-an-intimate-history",
+          title: 'The Gene: An Intimate History',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/b226a627-e68e-4ba9-822c-5d032933ccf4/";
+            },},{id: "books-антихрупкость-как-извлечь-выгоду-из-хаоса",
+          title: 'Антихрупкость. Как извлечь выгоду из хаоса',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/b38bb53d-e9f4-47c8-96cd-4ae513c2eb77/";
+            },},{id: "books-чому-ми-спимо-користаємо-з-усіх-можливостей-сну-та-сновидінь",
+          title: 'Чому ми спимо. Користаємо з усіх можливостей сну та сновидінь',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/b4830f3e-64e3-4203-8bdb-dc74887932ca/";
+            },},{id: "books-security-architecture-for-hybrid-cloud",
+          title: 'Security Architecture for Hybrid Cloud',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/b5332809-a0f7-495b-8487-8e3068124d79/";
+            },},{id: "books-инферно",
+          title: 'Инферно',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/b84c1499-fed1-4335-bcdf-c468c75738e7/";
+            },},{id: "books-thinking-in-systems-a-primer",
+          title: 'Thinking in Systems: A Primer',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/b89e2d6b-3dac-4aef-b2b0-41879f5474ae/";
+            },},{id: "books-наталка-полтавка",
+          title: 'Наталка-Полтавка',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/b934064c-81a6-42fd-96e9-2b7cfa5938b7/";
+            },},{id: "books-cybersecurity-ops-with-bash",
+          title: 'Cybersecurity Ops with bash',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/ba35ec10-ca58-411f-8975-33fd0c4f7d2b/";
+            },},{id: "books-зверобой",
+          title: 'Зверобой',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/bb000bf9-60d2-4dbc-b517-065a62434eed/";
+            },},{id: "books-ми-це-наш-мозок",
+          title: 'Ми — це наш мозок',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/bb440afc-4794-495c-8abb-0541bb6deff9/";
+            },},{id: "books-metaphors-we-live-by-george-lakoff-and-mark-johnsen",
+          title: 'Metaphors We Live By-George Lakoff and Mark Johnsen',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/bc98957f-30e6-4b89-b134-b8f12511d6af/";
+            },},{id: "books-чекапы-для-здоровья-и-долголетия",
+          title: 'Чекапы для здоровья и долголетия',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/bee6933d-e852-4cc0-9cef-2590cf369be8/";
+            },},{id: "books-процесс",
+          title: 'Процесс',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/c038dfd5-a8ee-468b-ae63-d4066c288dbe/";
+            },},{id: "books-убить-пересмешника",
+          title: 'Убить пересмешника',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/c056e2b5-432c-4d0f-81d5-e35d60c54dc1/";
+            },},{id: "books-алиса-в-стране-чудес",
+          title: 'Алиса в стране чудес',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/c49bedfb-3ebd-4ef4-9692-a7ad23bed8aa/";
+            },},{id: "books-microservices-from-design-to-deployment",
+          title: 'Microservices: From Design to Deployment',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/c50bc726-09a1-410f-ab53-308e61a25bea/";
+            },},{id: "books-краткая-история-времени-от-большого-взрыва-до-черных-дыр",
+          title: 'Краткая история времени. От большого взрыва до черных дыр',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/c7103b96-6f5a-429c-a642-119d0df9233c/";
+            },},{id: "books-cloud-native-security-cookbook",
+          title: 'Cloud Native Security Cookbook',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/c7784b6c-3a34-49c3-b392-bdfd7ac3d73a/";
+            },},{id: "books-harvard-business-review-guides-ultimate-boxed-set-16-books",
+          title: 'Harvard Business Review Guides Ultimate Boxed Set (16 Books)',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/c8136c6c-32d3-462f-99b5-e61cee08b03b/";
+            },},{id: "books-марсианские-хроники",
+          title: 'Марсианские хроники',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/c945d4d8-bab1-4554-9b5d-30d063999fbe/";
+            },},{id: "books-methods-in-biostatistics-with-r",
+          title: 'Methods in Biostatistics with R',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/c97da35c-40ec-40aa-bc31-f7625facafbe/";
+            },},{id: "books-intelligence-driven-incident-response",
+          title: 'Intelligence-Driven Incident Response',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/c99536db-aca0-48f4-94a3-920282a437f2/";
+            },},{id: "books-хамелеон",
+          title: 'Хамелеон',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/cacb3ce5-16c0-49d8-9a88-88f347c9e225/";
+            },},{id: "books-naval-how-to-get-rich",
+          title: 'Naval: How to Get Rich',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/d09b1971-9447-4acc-821d-0262164816ea/";
+            },},{id: "books-эйнштейн-его-жизнь-и-его-вселенная",
+          title: 'Эйнштейн. Его жизнь и его Вселенная',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/d328d2c4-3fa3-4b6d-925a-f4c8e866e1aa/";
+            },},{id: "books-practical-data-privacy",
+          title: 'Practical Data Privacy',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/d37a7945-526e-434f-9ae8-77fed9682e26/";
+            },},{id: "books-rich-dad-poor-dad",
+          title: 'Rich Dad Poor Dad',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/d492aeef-8ee0-4729-a313-d6e83e92a552/";
+            },},{id: "books-the-psychology-of-money",
+          title: 'The Psychology of Money',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/d49559e5-18e8-4733-9f85-49c59784d486/";
+            },},{id: "books-the-hero-with-a-thousand-faces-commemorative-edition-princeton-university-press-2004",
+          title: 'The Hero With A Thousand Faces, Commemorative Edition (Princeton University Press; 2004)',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/d592d818-2fed-4d6c-94ca-9b1c71129642/";
+            },},{id: "books-над-пропастью-во-ржи",
+          title: 'Над пропастью во ржи',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/d638ff85-7f6b-460a-a582-ec3dfbbc29d2/";
+            },},{id: "books-software-supply-chain-security",
+          title: 'Software Supply Chain Security',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/d723b6f8-d4c7-4785-8edf-f891ab652836/";
+            },},{id: "books-пиши-сокращай-как-создавать-сильный-текст",
+          title: 'Пиши, сокращай. Как создавать сильный текст',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/d7dd091e-2fa3-4af3-9e43-c780bf3b487e/";
+            },},{id: "books-жизнь-взаймы",
+          title: 'Жизнь взаймы',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/da85717e-15ee-4cd7-878e-a8eb2ba3d967/";
+            },},{id: "books-software-engineering-at-google",
+          title: 'Software Engineering at Google',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/dacda609-d54e-4eef-a64d-3f88caa55475/";
+            },},{id: "books-стандарты-программирования-на-с-101-правило-и-рекомендация",
+          title: 'Стандарты программирования на С++. 101 правило и рекомендация',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/ddc01825-6634-44dc-a4f6-759af0d7b5a6/";
+            },},{id: "books-іван-іванович",
+          title: 'Іван Іванович',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/ddd9f2fd-a7b9-4769-a485-39714eb65bdb/";
+            },},{id: "books-are-your-lights-on",
+          title: 'Are Your Lights On?',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/df8f8bbe-0f1f-46df-906b-e5d57fd80202/";
+            },},{id: "books-муму",
+          title: 'Муму',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/e32b34d7-295e-4a07-b073-5d978afa5ddb/";
+            },},{id: "books-security-and-microservice-architecture-on-aws",
+          title: 'Security and Microservice Architecture on AWS',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/e3d9e209-3d0b-4196-add1-b590720415d5/";
+            },},{id: "books-ледокол",
+          title: 'Ледокол',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/e4f851ea-21fd-4423-990c-59535ff87871/";
+            },},{id: "books-компьютерная-графика",
+          title: 'Компьютерная графика',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/e74ae100-6eb8-4342-a6f7-158eda501329/";
+            },},{id: "books-zero-to-one",
+          title: 'Zero to One',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/eab0a226-0ade-488a-ac5f-9cc56985593a/";
+            },},{id: "books-97-things-every-application-security-professional-should-know",
+          title: '97 Things Every Application Security Professional Should Know',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/ecf92bc8-4d53-4a57-8fba-1c0ba319aeb6/";
+            },},{id: "books-college-algebra",
+          title: 'College Algebra',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/edb200db-3cd2-4d7b-b9ab-db9e32c663b5/";
+            },},{id: "books-тіні-забутих-предків",
+          title: 'Тіні забутих предків',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/ee55a77c-49b8-486d-a694-2daf6b91be77/";
+            },},{id: "books-прощай-оружие",
+          title: 'Прощай, оружие!',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/f011bb9e-a5d8-43ec-9d92-e3d8a072de7a/";
+            },},{id: "books-принцип-сперматозоида",
+          title: 'Принцип сперматозоида',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/f0ac4b4f-5612-476d-b41a-217091aa11df/";
+            },},{id: "books-людина-в-пошуках-справжнього-сенсу-психолог-у-концтаборі",
+          title: 'Людина в пошуках справжнього сенсу. Психолог у концтаборі',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/f1ca94b1-0708-4e6c-a3f4-afafd929b85d/";
+            },},{id: "books-the-new-book-publishing-playbook",
+          title: 'The New Book Publishing Playbook',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/f469396e-4032-4386-a54c-008d0e3fa8fd/";
+            },},{id: "books-дай-вам-бог-здоровья-мистер-розуотер-или-не-мечите-бисера-перед-свиньями",
+          title: 'Дай вам бог здоровья, мистер Розуотер, или Не мечите бисера перед свиньями',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/f51b97f1-2eb7-4807-b351-d6b877f231b9/";
+            },},{id: "books-о-дивный-новый-мир",
+          title: 'О дивный новый мир',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/f5363877-5e13-45ca-aa49-c0842a697a6b/";
+            },},{id: "books-герой-нашего-времени",
+          title: 'Герой нашего времени',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/f895d27b-7626-47c9-a5d9-431e905a05ee/";
+            },},{id: "books-маленький-принц",
+          title: 'Маленький Принц',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/fbc5144e-c8c5-4ab2-8f70-dea30c2aadba/";
+            },},{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
           section: "Books",handler: () => {
