@@ -12,10 +12,13 @@ import csv
 import datetime
 import re
 import sys
+import shutil
 from pathlib import Path
 
 DEFAULT_INPUT = Path("_data/books.csv")
 BOOKS_DIR = Path("_books")
+BOOK_COVERS_DIR = Path("assets/img/book_covers")
+BOOK_COVERS_URL_PREFIX = "assets/img/book_covers"
 
 
 def safe_slug(text: str) -> str:
@@ -101,10 +104,66 @@ def find_isbn(row: dict) -> str:
     return ""
 
 
+def extract_asin_from_identifiers(value: str) -> str:
+    if not value:
+        return ""
+    for part in value.split(","):
+        key_value = part.split(":", 1)
+        if len(key_value) != 2:
+            continue
+        key, val = key_value
+        key = key.lower().strip()
+        if "asin" in key:
+            cleaned = re.sub(r"[^A-Za-z0-9]", "", val)
+            if cleaned:
+                return cleaned
+    return ""
+
+
+def find_cover(row: dict, isbn: str) -> str:
+    # If cover provided, respect it.
+    cover = (row.get("cover") or "").strip()
+    if cover:
+        local_cover = maybe_copy_cover(cover, row)
+        if local_cover:
+            return local_cover
+        return cover
+
+    # Prefer Open Library cover by ISBN.
+    if isbn:
+        return f"https://covers.openlibrary.org/b/isbn/{isbn}-L.jpg"
+
+    # Fallback to ASIN if present in identifiers.
+    asin = extract_asin_from_identifiers(row.get("identifiers", ""))
+    if asin:
+        return f"https://covers.openlibrary.org/b/asin/{asin}-L.jpg"
+
+    return ""
+
+def maybe_copy_cover(path_str: str, row: dict) -> str:
+    """Copy a local cover image into the site's cover directory and return its relative URL."""
+    src = Path(path_str).expanduser()
+    if not src.exists() or not src.is_file():
+        return ""
+
+    BOOK_COVERS_DIR.mkdir(parents=True, exist_ok=True)
+
+    slug = make_slug(row)
+    ext = src.suffix if src.suffix else ".jpg"
+    dest = BOOK_COVERS_DIR / f"{slug}{ext}"
+    try:
+        shutil.copyfile(src, dest)
+    except Exception:
+        return ""
+
+    return f"{BOOK_COVERS_URL_PREFIX}/{dest.name}"
+
+
 def build_front_matter(row: dict) -> list[str]:
     title = row.get("title") or "Untitled"
     authors = row.get("authors") or row.get("author") or ""
     isbn = find_isbn(row)
+    cover = find_cover(row, isbn)
     year = parse_year(row.get("pubdate", ""))
     stars = (row.get("rating") or "").strip()
     tags = to_list(row.get("tags", ""))
@@ -116,6 +175,7 @@ def build_front_matter(row: dict) -> list[str]:
         f"title: {quote(title)}",
         f"author: {quote(authors)}" if authors else None,
         f"isbn: {isbn}" if isbn else None,
+        f"cover: {cover}" if cover else None,
         f"released: {year}" if year else None,
         f"stars: {stars}" if stars else None,
         f"languages: {render_list(languages)}" if languages else None,
