@@ -15,10 +15,10 @@ layout: page
 
       {% for item in books %}
         {% assign cat_list = item[category_field] %}
-        {% if cat_list == nil or cat_list == empty %}
+        {% if cat_list == null or cat_list == empty %}
           {% assign cat_list = item.tags %}
         {% endif %}
-        {% if cat_list == nil or cat_list == empty %}
+        {% if cat_list == null or cat_list == empty %}
           {% assign cat_list = 'Uncategorized' | split: ',' %}
         {% endif %}
 
@@ -41,7 +41,8 @@ layout: page
       {% if all_categories.size > 0 %}
         <div class="book-category-nav">
           {% for cat in all_categories %}
-            <a href="#{{ cat | slugify }}">{{ cat }}</a>{% unless forloop.last %} &middot; {% endunless %}
+            <a href="#{{ cat | slugify }}">{{ cat }}</a>
+            {%- unless forloop.last %} &middot; {% endunless %}
           {% endfor %}
         </div>
       {% endif %}
@@ -51,10 +52,10 @@ layout: page
         <div class="book-grid">
           {% for item in books %}
             {% assign cat_list = item[category_field] %}
-            {% if cat_list == nil or cat_list == empty %}
+            {% if cat_list == null or cat_list == empty %}
               {% assign cat_list = item.tags %}
             {% endif %}
-            {% if cat_list == nil or cat_list == empty %}
+            {% if cat_list == null or cat_list == empty %}
               {% assign cat_list = 'Uncategorized' | split: ',' %}
             {% endif %}
 
@@ -78,9 +79,17 @@ layout: page
                   {% if item.cover %}
                     <img alt="{{ item.title }} cover" src="{{ item.cover | prepend: page.covers | relative_url }}" style="height:200px">
                   {% elsif item.olid %}
-                    <img alt="{{ item.title }} cover" src="http://covers.openlibrary.org/b/olid/{{ item.olid }}-L.jpg?default=false" style="height:200px">
+                    <img
+                      alt="{{ item.title }} cover"
+                      src="http://covers.openlibrary.org/b/olid/{{ item.olid }}-L.jpg?default=false"
+                      style="height:200px"
+                    >
                   {% elsif item.isbn %}
-                    <img alt="{{ item.title }} cover" src="http://covers.openlibrary.org/b/isbn/{{ item.isbn }}-L.jpg?default=false" style="height:200px">
+                    <img
+                      alt="{{ item.title }} cover"
+                      src="http://covers.openlibrary.org/b/isbn/{{ item.isbn }}-L.jpg?default=false"
+                      style="height:200px"
+                    >
                   {% endif %}
                   {% if item.status %}
                     {% assign statuses = 'abandoned,finished,interested,paused,queued,reading,reread' | split: ',' %}
