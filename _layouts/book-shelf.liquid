@@ -5,45 +5,162 @@ layout: page
 
 {% if page.collection and page.collection.size > 0 %}
   {% assign collection = site[page.collection] %}
+  {% assign group_by = page.group_by | default: 'year' %}
+  {% assign category_field = page.category_field | default: 'categories' %}
+
   {% if collection and collection.size > 0 %}
-    {% for item in collection reversed %}
-      {% assign current_year = item.date | date: '%Y' %}
-      {% if current_year != year %}
-        {% unless forloop.first %}
-          </ul>
-        {% endunless %}
-        <h1 id="y{{item.date | date: "%Y"}}">
-          <a href="{{ current_year | prepend: '/books/' | relative_url }}">{{ current_year }}</a>
-        </h1>
-        <ul>
-          {% assign year = current_year %}
+    {% if group_by == 'category' %}
+      {% assign books = collection %}
+      {% assign all_categories = '' | split: '' %}
+
+      {% for item in books %}
+        {% assign cat_list = item[category_field] %}
+        {% if cat_list == nil or cat_list == empty %}
+          {% assign cat_list = item.tags %}
+        {% endif %}
+        {% if cat_list == nil or cat_list == empty %}
+          {% assign cat_list = 'Uncategorized' | split: ',' %}
+        {% endif %}
+
+        {% for cat in cat_list %}
+          {% assign cat_name = cat | strip %}
+          {% if page.category_map and page.category_map[cat_name] %}
+            {% assign cat_name = page.category_map[cat_name] %}
+          {% endif %}
+          {% if cat_name == '' %}
+            {% assign cat_name = 'Uncategorized' %}
+          {% endif %}
+          {% unless all_categories contains cat_name %}
+            {% assign all_categories = all_categories | push: cat_name %}
+          {% endunless %}
+        {% endfor %}
+      {% endfor %}
+
+      {% assign all_categories = all_categories | uniq | sort_natural %}
+
+      {% if all_categories.size > 0 %}
+        <div class="book-category-nav">
+          {% for cat in all_categories %}
+            <a href="#{{ cat | slugify }}">{{ cat }}</a>{% unless forloop.last %} &middot; {% endunless %}
+          {% endfor %}
+        </div>
       {% endif %}
 
-      <figure class="cover">
-        <a class="cover-link" href="{{ item.url | relative_url }}">
-          {% if item.cover %}
-            <img alt="{{ item.title }} cover" src="{{ item.cover | prepend: page.covers | relative_url }}" style="height:200px">
-          {% elsif item.olid %}
-            <img alt="{{ item.title }} cover" src="http://covers.openlibrary.org/b/olid/{{ item.olid }}-L.jpg?default=false" style="height:200px">
-          {% elsif item.isbn %}
-            <img alt="{{ item.title }} cover" src="http://covers.openlibrary.org/b/isbn/{{ item.isbn }}-L.jpg?default=false" style="height:200px">
-          {% endif %}
-          {% if item.status %}
-            {% assign statuses = 'abandoned,finished,interested,paused,queued,reading,reread' | split: ',' %}
-            {% assign status = item.status | downcase | strip %}
-            {% if statuses contains status %}
-              <figcaption class="{{ status | downcase }}">{{ status | upcase }}</figcaption>
+      {% for cat in all_categories %}
+        <h1 id="{{ cat | slugify }}">{{ cat }}</h1>
+        <div class="book-grid">
+          {% for item in books %}
+            {% assign cat_list = item[category_field] %}
+            {% if cat_list == nil or cat_list == empty %}
+              {% assign cat_list = item.tags %}
+            {% endif %}
+            {% if cat_list == nil or cat_list == empty %}
+              {% assign cat_list = 'Uncategorized' | split: ',' %}
+            {% endif %}
+
+            {% assign has_cat = false %}
+            {% for cat_value in cat_list %}
+              {% assign cat_name = cat_value | strip %}
+              {% if page.category_map and page.category_map[cat_name] %}
+                {% assign cat_name = page.category_map[cat_name] %}
+              {% endif %}
+              {% if cat_name == '' %}
+                {% assign cat_name = 'Uncategorized' %}
+              {% endif %}
+              {% if cat_name == cat %}
+                {% assign has_cat = true %}
+              {% endif %}
+            {% endfor %}
+
+            {% if has_cat %}
+              <figure class="cover">
+                <a class="cover-link" href="{{ item.url | relative_url }}">
+                  {% if item.cover %}
+                    <img alt="{{ item.title }} cover" src="{{ item.cover | prepend: page.covers | relative_url }}" style="height:200px">
+                  {% elsif item.olid %}
+                    <img alt="{{ item.title }} cover" src="http://covers.openlibrary.org/b/olid/{{ item.olid }}-L.jpg?default=false" style="height:200px">
+                  {% elsif item.isbn %}
+                    <img alt="{{ item.title }} cover" src="http://covers.openlibrary.org/b/isbn/{{ item.isbn }}-L.jpg?default=false" style="height:200px">
+                  {% endif %}
+                  {% if item.status %}
+                    {% assign statuses = 'abandoned,finished,interested,paused,queued,reading,reread' | split: ',' %}
+                    {% assign status = item.status | downcase | strip %}
+                    {% if statuses contains status %}
+                      <figcaption class="{{ status | downcase }}">{{ status | upcase }}</figcaption>
+                    {% else %}
+                      <figcaption class="uncategorized">UNCATEGORIZED</figcaption>
+                    {% endif %}
+                  {% else %}
+                    <figcaption class="uncategorized">UNCATEGORIZED</figcaption>
+                  {% endif %}
+                </a>
+              </figure>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endfor %}
+    {% else %}
+      {% for item in collection reversed %}
+        {% assign current_year = item.date | date: '%Y' %}
+        {% if current_year != year %}
+          {% unless forloop.first %}
+            </ul>
+          {% endunless %}
+          <h1 id="y{{item.date | date: "%Y"}}">
+            <a href="{{ current_year | prepend: '/books/' | relative_url }}">{{ current_year }}</a>
+          </h1>
+          <ul>
+            {% assign year = current_year %}
+        {% endif %}
+
+        <figure class="cover">
+          <a class="cover-link" href="{{ item.url | relative_url }}">
+            {% if item.cover %}
+              <img alt="{{ item.title }} cover" src="{{ item.cover | prepend: page.covers | relative_url }}" style="height:200px">
+            {% elsif item.olid %}
+              <img alt="{{ item.title }} cover" src="http://covers.openlibrary.org/b/olid/{{ item.olid }}-L.jpg?default=false" style="height:200px">
+            {% elsif item.isbn %}
+              <img alt="{{ item.title }} cover" src="http://covers.openlibrary.org/b/isbn/{{ item.isbn }}-L.jpg?default=false" style="height:200px">
+            {% endif %}
+            {% if item.status %}
+              {% assign statuses = 'abandoned,finished,interested,paused,queued,reading,reread' | split: ',' %}
+              {% assign status = item.status | downcase | strip %}
+              {% if statuses contains status %}
+                <figcaption class="{{ status | downcase }}">{{ status | upcase }}</figcaption>
+              {% else %}
+                <figcaption class="uncategorized">UNCATEGORIZED</figcaption>
+              {% endif %}
             {% else %}
               <figcaption class="uncategorized">UNCATEGORIZED</figcaption>
             {% endif %}
-          {% else %}
-            <figcaption class="uncategorized">UNCATEGORIZED</figcaption>
-          {% endif %}
-        </a>
-      </figure>
-      {% if forloop.last %}
-        </ul>
-      {% endif %}
-    {% endfor %}
+          </a>
+        </figure>
+        {% if forloop.last %}
+          </ul>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
   {% endif %}
 {% endif %}
+
+<style>
+  .book-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    margin: 0 0 2rem;
+  }
+
+  .book-grid .cover {
+    margin: 0;
+  }
+
+  .book-category-nav {
+    margin: 0 0 1rem;
+  }
+
+  .book-category-nav a {
+    white-space: nowrap;
+  }
+</style>
