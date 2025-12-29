@@ -2,6 +2,7 @@
 layout: book-review
 title: "Алиса в стране чудес"
 author: "Льюис Кэрролл"
+cover: assets/img/book_covers/c49bedfb-3ebd-4ef4-9692-a7ad23bed8aa.jpg
 languages: ["rus"]
 status: Planned
 ---
