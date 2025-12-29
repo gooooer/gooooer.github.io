@@ -1,200 +1,223 @@
 {
   "basics": {
-    "name": "Andrii Gorshnii",
-    "label": "Software Engineer",
-    "image": "",
+    "name": "Andrii Gorishnii",
+    "label": "Senior Solutions Architect & Systems Engineer",
     "email": "andrii.gorishnii@gmail.com",
-    "phone": "(510) 365-0233",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
-    "location": {
-      "address": "Las Vegas, NV, USA",
-      "postalCode": "NV 89129",
-      "city": "Las Vegas",
-      "countryCode": "US",
-      "region": "Nevada"
-    },
-    "profiles": [
-      {
-        "network": "X",
-        "username": "gooooer",
-        "url": "https://x.com/gooooer"
-      }
-    ]
+    "phone": "+1 (510) 365-0233",
+    "url": "https://www.linkedin.com/in/gorishnii",
+    "address": "Las Vegas, NV 89129, USA",
+    "summary": "I'm a systems-level software engineer and architect with 20 years of experience building things that don't fall apart when scaled - payment systems, audio&video streaming solutions, custom hardware platforms deployed in millions of households, and even games back in the day.<br><br>I enjoy solving real problems: making software faster, more reliable, and secure while keeping teams productive and clients happy. My background spans embedded Linux, distributed systems, AI/ML, and modern cloud platforms like AWS and Azure.<br><br>These days, I lead solutions architecture for fintech and enterprise clients at PwC, translating big, often undistilled business goals into systems that actually deliver. Before that, I shipped everything from ERP platforms for global event organizers to voice-driven gaming systems and IoT setups.<br><br>Outside of tech, I'm a science enthusiast and endurance athlete (2x Ironman finisher), which probably explains my obsession with long-term, sustainable systems - both in code and in life.",
+    "company": "<a href=\"https://torch.systems\" target=\"_blank\" rel=\"noopener noreferrer\">Torch Systems</a>"
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
+      "name": "Kunai",
+      "position": "Senior Solutions Architect",
+      "location": "Las Vegas, USA",
+      "startDate": "2023-08",
+      "endDate": "",
+      "summary": "Lead solutions architecture for fintech and enterprise clients, from discovery through delivery oversight.",
+      "highlights": [
+        "Conduct project discovery and systems assessments for financial institutions.",
+        "Deliver technical solutions, detailed estimations, proofs of concept, and release plans.",
+        "Assemble and manage cross-functional engineering, data, QA, and DevOps teams.",
+        "Modernized a major U.S. payment processor with Kafka-based event unification.",
+        "Led migration of backend payment and card management systems for a large U.S. credit union."
+      ]
+    },
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "name": "Kunai",
+      "position": "Senior Integration Engineer / Technical PM",
+      "location": "Oakland, USA",
+      "startDate": "2021-01",
+      "endDate": "2023-07",
+      "summary": "Ran delivery and technical leadership for a large-scale ERP platform.",
+      "highlights": [
+        "Led a team of 12 engineers maintaining a 2M-line ERP (Ruby on Rails + Ember.js).",
+        "Supported 1,000+ daily users with strong performance and low technical debt.",
+        "Established QA and delivery processes critical for financial data integrity.",
+        "Partnered with business analysts to redesign the core financial model."
+      ]
+    },
+    {
+      "name": "Kunai",
+      "position": "Senior Software Engineer",
+      "location": "Oakland, USA",
+      "startDate": "2017-02",
+      "endDate": "2020-12",
+      "summary": "Early engineer contributing across mobile, web, and DevOps to land early clients.",
+      "highlights": [
+        "Among the first five U.S. employees; partnered with founders on early products.",
+        "Delivered mobile applications using native and hybrid frameworks.",
+        "Built full-stack features with Node.js and React.js.",
+        "Managed AWS infrastructure and CI/CD pipelines.",
+        "Designed Java Spring Boot security architecture for a financial audit platform and passed external penetration tests.",
+        "Stabilized legacy ASP.NET/MS SQL systems and contributed to next-generation ERP architecture."
+      ]
+    },
+    {
+      "name": "Independent Software Consultant",
+      "position": "Self-Employed",
+      "location": "Ukraine",
+      "startDate": "2014-06",
+      "endDate": "2017-01",
+      "summary": "Delivered 15+ mobile and web applications for U.S. and European clients.",
+      "highlights": [
+        "Built a music streaming platform (Norway) and a Musical.ly-style video LipSync app.",
+        "Developed taxi service driver/client applications and a dating app for a German client.",
+        "Technologies: REST, OAuth, TCP/IP, WebSockets, Protobuf, Android BLE, iBeacon, OpenGL, SQL.",
+        "Upwork profile: https://www.upwork.com/freelancers/~016b3e763713e69ab1."
+      ]
+    },
+    {
+      "name": "Advanced Digital Broadcast",
+      "position": "Engineering Team Lead",
+      "location": "Ukraine",
+      "startDate": "2011-01",
+      "endDate": "2014-05",
+      "summary": "Led IPTV STB performance optimization and mentored a team of engineers.",
+      "highlights": [
+        "Managed and mentored a team of four engineers.",
+        "Drove performance optimization across the full IPTV software stack.",
+        "Resolved critical system bottlenecks."
+      ]
+    },
+    {
+      "name": "Advanced Digital Broadcast",
+      "position": "Embedded Software Engineer",
+      "location": "Ukraine",
+      "startDate": "2008-10",
+      "endDate": "2011-01",
+      "summary": "Optimized embedded IPTV systems and build pipelines for better performance.",
+      "highlights": [
+        "Built a CI pipeline with Ant, reducing release cycles from months to weeks.",
+        "Optimized boot time via parallel decryption strategies.",
+        "Improved network stack latency by up to 50% using kernel-level optimizations.",
+        "Reduced channel switching time to under one second.",
+        "Developed a proprietary 3D graphics driver for Broadcom SoCs (OpenGL ES).",
+        "Demonstrated the next-gen IPTV platform at CES 2009."
+      ]
+    },
+    {
+      "name": "4A Games",
+      "position": "AI Software Engineer",
+      "location": "Ukraine",
+      "startDate": "2007-12",
+      "endDate": "2008-08",
+      "summary": "AI engineer on Metro 2033 with the S.T.A.L.K.E.R. team.",
+      "highlights": [
+        "Developed NPC AI using behavior trees, decision trees, and fuzzy logic.",
+        "Extended game editor tools and audio systems.",
+        "Implemented dynamic animations with inverse kinematics."
+      ]
+    },
+    {
+      "name": "Program-Ace",
+      "position": "Software Engineer",
+      "location": "Ukraine",
+      "startDate": "2006-09",
+      "endDate": "2007-11",
+      "summary": "Designed and developed multiplayer casual games and rich desktop applications.",
+      "highlights": [
+        "Owned full deployment lifecycle and post-release support.",
+        "Notable projects: Management Game (multiplayer economic simulation for Norwegian School of Economics), Gazillionaire III (single-player economic strategy), GameZilla (online game portal desktop client)."
+      ]
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
+      "institution": "Louisiana State University at Alexandria",
+      "location": "Alexandria, USA",
+      "area": "Biology",
+      "studyType": "Bachelor of Science (BS)",
+      "startDate": "2024-10",
+      "endDate": "2027-05",
+      "courses": []
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
+      "institution": "National Technical University “Kharkiv Polytechnic Institute”",
+      "location": "Kharkiv, Ukraine",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Science (BS)",
+      "startDate": "2007-01",
+      "endDate": "2010-12",
+      "courses": []
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
-    },
-    {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "institution": "Kharkiv Patent Computer College",
+      "location": "Kharkiv, Ukraine",
+      "area": "Computer Science",
+      "studyType": "Associate of Science (AS)",
+      "startDate": "2003-01",
+      "endDate": "2007-12",
+      "courses": []
     }
   ],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
+      "name": "Top Skills",
+      "level": "",
+      "icon": "fa-solid fa-star",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Machine Learning Algorithms",
+        "Cloud-Native Architecture",
+        "Digital Signal Processing (DSP)",
+        "Embedded Linux & Custom Hardware",
+        "Distributed Systems & Eventing",
+        "AI/ML Systems on AWS & Azure"
       ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Unsupervised Learning, Recommenders, Reinforcement Learning",
+      "issuer": "Coursera/DeepLearning.AI",
+      "date": "",
+      "url": "https://www.coursera.org/account/accomplishments/verify/U24AJE4ZMXEP",
+      "icon": "fa-solid fa-certificate"
+    },
+    {
+      "name": "Supervised Machine Learning: Regression and Classification",
+      "issuer": "Coursera/DeepLearning.AI",
+      "date": "",
+      "url": "https://www.coursera.org/account/accomplishments/verify/6Z9VDS26W26P",
+      "icon": "fa-solid fa-certificate"
+    },
+    {
+      "name": "Advanced Learning Algorithms",
+      "issuer": "Coursera/DeepLearning.AI",
+      "date": "",
+      "url": "https://www.coursera.org/account/accomplishments/verify/J5XSGTQW582X",
+      "icon": "fa-solid fa-certificate"
+    },
+    {
+      "name": "English Proficiency Certificate",
+      "issuer": "",
+      "date": "",
+      "url": "https://certs.duolingo.com/b72b61facdba502ea40242bbbbeee7b6",
+      "icon": "fa-solid fa-certificate"
     }
   ],
   "languages": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
+      "language": "Russian",
+      "fluency": "Native / Bilingual",
+      "icon": ""
+    },
+    {
+      "language": "Ukrainian",
+      "fluency": "Native / Bilingual",
       "icon": ""
     },
     {
       "language": "English",
-      "fluency": "Fluent",
+      "fluency": "Full Professional",
       "icon": ""
-    }
-  ],
-  "interests": [
-    {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
     },
     {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "language": "Spanish",
+      "fluency": "Elementary",
+      "icon": ""
     }
   ]
 }
