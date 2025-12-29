@@ -7,6 +7,8 @@ layout: page
   {% assign collection = site[page.collection] %}
   {% assign group_by = page.group_by | default: 'year' %}
   {% assign category_field = page.category_field | default: 'categories' %}
+  {% assign allowed_categories = page.allowed_categories %}
+  {% assign fallback_category = page.fallback_category | default: 'Uncategorized' %}
 
   {% if collection and collection.size > 0 %}
     {% if group_by == 'category' %}
@@ -18,18 +20,56 @@ layout: page
         {% if cat_list == null or cat_list == empty %}
           {% assign cat_list = item.tags %}
         {% endif %}
-        {% if cat_list == null or cat_list == empty %}
-          {% assign cat_list = 'Uncategorized' | split: ',' %}
+
+        {% assign cat_raw = '' %}
+        {% if cat_list %}
+          {% assign cat_raw = cat_list | join: ',' %}
+          {% if cat_raw == '' %}
+            {% assign cat_raw = cat_list %}
+          {% endif %}
+        {% endif %}
+        {% if cat_raw == '' %}
+          {% assign cat_raw = fallback_category %}
         {% endif %}
 
+        {% assign cat_list = cat_raw | replace: ';', ',' | replace: ' ,', ',' | replace: '  ', ' ' | replace: ' ', ',' | split: ',' %}
+        {% if cat_list == null or cat_list == empty %}
+          {% assign cat_list = fallback_category | split: ',' %}
+        {% endif %}
+
+        {% assign mapped_cats = '' | split: '' %}
+        {% assign has_real_cat = false %}
         {% for cat in cat_list %}
           {% assign cat_name = cat | strip %}
-          {% if page.category_map and page.category_map[cat_name] %}
-            {% assign cat_name = page.category_map[cat_name] %}
+          {% assign cat_key = cat_name | downcase %}
+          {% if page.category_map and page.category_map[cat_key] %}
+            {% assign cat_name = page.category_map[cat_key] %}
           {% endif %}
           {% if cat_name == '' %}
-            {% assign cat_name = 'Uncategorized' %}
+            {% assign cat_name = fallback_category %}
           {% endif %}
+          {% if allowed_categories and allowed_categories != empty %}
+            {% unless allowed_categories contains cat_name %}
+              {% assign cat_name = fallback_category %}
+            {% endunless %}
+          {% endif %}
+          {% if cat_name != fallback_category %}
+            {% assign has_real_cat = true %}
+          {% endif %}
+          {% assign mapped_cats = mapped_cats | push: cat_name %}
+        {% endfor %}
+
+        {% assign final_cats = '' | split: '' %}
+        {% for mapped in mapped_cats %}
+          {% if has_real_cat and mapped == fallback_category %}
+            {% continue %}
+          {% endif %}
+          {% unless final_cats contains mapped %}
+            {% assign final_cats = final_cats | push: mapped %}
+          {% endunless %}
+        {% endfor %}
+
+        {% for cat_name in final_cats %}
           {% unless all_categories contains cat_name %}
             {% assign all_categories = all_categories | push: cat_name %}
           {% endunless %}
@@ -37,6 +77,21 @@ layout: page
       {% endfor %}
 
       {% assign all_categories = all_categories | uniq | sort_natural %}
+
+      {% if page.category_order %}
+        {% assign ordered_categories = '' | split: '' %}
+        {% for desired in page.category_order %}
+          {% if all_categories contains desired %}
+            {% assign ordered_categories = ordered_categories | push: desired %}
+          {% endif %}
+        {% endfor %}
+        {% for cat in all_categories %}
+          {% unless ordered_categories contains cat %}
+            {% assign ordered_categories = ordered_categories | push: cat %}
+          {% endunless %}
+        {% endfor %}
+        {% assign all_categories = ordered_categories %}
+      {% endif %}
 
       {% if all_categories.size > 0 %}
         <div class="book-category-nav">
@@ -55,19 +110,57 @@ layout: page
             {% if cat_list == null or cat_list == empty %}
               {% assign cat_list = item.tags %}
             {% endif %}
+
+            {% assign cat_raw = '' %}
+            {% if cat_list %}
+              {% assign cat_raw = cat_list | join: ',' %}
+              {% if cat_raw == '' %}
+                {% assign cat_raw = cat_list %}
+              {% endif %}
+            {% endif %}
+            {% if cat_raw == '' %}
+              {% assign cat_raw = fallback_category %}
+            {% endif %}
+
+            {% assign cat_list = cat_raw | replace: ';', ',' | replace: ' ,', ',' | replace: '  ', ' ' | replace: ' ', ',' | split: ',' %}
             {% if cat_list == null or cat_list == empty %}
-              {% assign cat_list = 'Uncategorized' | split: ',' %}
+              {% assign cat_list = fallback_category | split: ',' %}
             {% endif %}
 
             {% assign has_cat = false %}
+            {% assign mapped_cats = '' | split: '' %}
+            {% assign has_real_cat = false %}
             {% for cat_value in cat_list %}
               {% assign cat_name = cat_value | strip %}
-              {% if page.category_map and page.category_map[cat_name] %}
-                {% assign cat_name = page.category_map[cat_name] %}
+              {% assign cat_key = cat_name | downcase %}
+              {% if page.category_map and page.category_map[cat_key] %}
+                {% assign cat_name = page.category_map[cat_key] %}
               {% endif %}
               {% if cat_name == '' %}
-                {% assign cat_name = 'Uncategorized' %}
+                {% assign cat_name = fallback_category %}
               {% endif %}
+              {% if allowed_categories and allowed_categories != empty %}
+                {% unless allowed_categories contains cat_name %}
+                  {% assign cat_name = fallback_category %}
+                {% endunless %}
+              {% endif %}
+              {% if cat_name != fallback_category %}
+                {% assign has_real_cat = true %}
+              {% endif %}
+              {% assign mapped_cats = mapped_cats | push: cat_name %}
+            {% endfor %}
+
+            {% assign final_cats = '' | split: '' %}
+            {% for mapped in mapped_cats %}
+              {% if has_real_cat and mapped == fallback_category %}
+                {% continue %}
+              {% endif %}
+              {% unless final_cats contains mapped %}
+                {% assign final_cats = final_cats | push: mapped %}
+              {% endunless %}
+            {% endfor %}
+
+            {% for cat_name in final_cats %}
               {% if cat_name == cat %}
                 {% assign has_cat = true %}
               {% endif %}

@@ -10,10 +10,192 @@ Usage:
 
 import csv
 import datetime
+import os
 import re
 import sys
 import shutil
+import json
 from pathlib import Path
+from urllib import request, error
+
+ALLOWED_CATEGORIES = {
+    "Engineering",
+    "Science",
+    "Fiction",
+    "Nonfiction",
+    "Business",
+    "Psychology",
+    "Arts",
+    "Physical Health",
+    "Uncategorized",
+}
+
+# Optional AI classification (set OPENAI_API_KEY to enable).
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
+AI_MODEL = os.getenv("AI_CLASSIFIER_MODEL", "gpt-4o-mini").strip()
+AI_TIMEOUT = float(os.getenv("AI_CLASSIFIER_TIMEOUT", "8").strip() or 8)
+
+# Base tag-to-category hints (aligns with category_map in _pages/books.md).
+TAG_CATEGORY_HINTS = {
+    # Existing mappings
+    "comp_programming": "Engineering",
+    "programming": "Engineering",
+    "engineering": "Engineering",
+    "security": "Engineering",
+    "cloud": "Engineering",
+    "devops": "Engineering",
+    "infrastructure": "Engineering",
+    "web": "Engineering",
+    "software": "Engineering",
+    "sci_psychology": "Science",
+    "literature_19": "Fiction",
+    "prose_rus_classic": "Fiction",
+    "child_prose": "Fiction",
+    "nonfiction": "Nonfiction",
+    # New high-level shortcuts
+    "business": "Business",
+    "psychology": "Psychology",
+    "arts": "Arts",
+    "physical_health": "Physical Health",
+    "health": "Physical Health",
+    "fitness": "Physical Health",
+    "running": "Physical Health",
+}
+
+# Keyword hints searched in title/comments for each category (best-effort).
+KEYWORD_HINTS = {
+    "Engineering": [
+        "programming",
+        "software",
+        "engineering",
+        "systems",
+        "system",
+        "algorithm",
+        "computer",
+        "developer",
+        "devops",
+        "code",
+        "ai",
+        "machine learning",
+        "ml",
+        "data science",
+        "cloud",
+        "aws",
+        "azure",
+        "gcp",
+        "kubernetes",
+        "docker",
+        "containers",
+        "security",
+        "secure",
+        "infosec",
+        "cybersecurity",
+        "network security",
+        "application security",
+        "web security",
+        "web application security",
+        "sre",
+        "site reliability",
+        "observability",
+        "monitoring",
+        "logging",
+        "infrastructure",
+        "iac",
+        "terraform",
+        "ansible",
+        "policy as code",
+    ],
+    "Science": [
+        "science",
+        "physics",
+        "chemistry",
+        "biology",
+        "math",
+        "mathematics",
+        "discrete math",
+        "discrete mathematics",
+        "astronomy",
+        "geology",
+        "cognitive",
+        "neuroscience",
+    ],
+    "Psychology": [
+        "psychology",
+        "psychological",
+        "cognitive",
+        "mind",
+        "behavior",
+        "behaviour",
+        "brain",
+    ],
+    "Business": [
+        "business",
+        "startup",
+        "start-up",
+        "strategy",
+        "management",
+        "leadership",
+        "marketing",
+        "sales",
+        "finance",
+        "economics",
+        "entrepreneur",
+    ],
+    "Arts": [
+        "art",
+        "arts",
+        "design",
+        "music",
+        "painting",
+        "photography",
+        "film",
+        "cinema",
+        "theater",
+        "theatre",
+        "language",
+    ],
+    "Physical Health": [
+        "health",
+        "fitness",
+        "exercise",
+        "training",
+        "run",
+        "running",
+        "marathon",
+        "triathlon",
+        "sport",
+        "sports",
+        "athlete",
+        "coaching",
+        "diet",
+        "dieting",
+        "nutrition",
+        "wellness",
+    ],
+    "Fiction": [
+        "novel",
+        "story",
+        "stories",
+        "fiction",
+        "fantasy",
+        "sci-fi",
+        "science fiction",
+        "thriller",
+        "romance",
+        "mystery",
+        "prose",
+        "classic",
+    ],
+    "Nonfiction": [
+        "nonfiction",
+        "non-fiction",
+        "biography",
+        "memoir",
+        "history",
+        "essay",
+        "reportage",
+    ],
+}
 
 DEFAULT_INPUT = Path("_data/books.csv")
 BOOKS_DIR = Path("_books")
@@ -168,6 +350,7 @@ def build_front_matter(row: dict) -> list[str]:
     stars = (row.get("rating") or "").strip()
     tags = to_list(row.get("tags", ""))
     languages = to_list(row.get("languages", ""))
+    category = detect_category(title, tags, row.get("comments", ""))
 
     lines = [
         "---",
@@ -180,6 +363,7 @@ def build_front_matter(row: dict) -> list[str]:
         f"stars: {stars}" if stars else None,
         f"languages: {render_list(languages)}" if languages else None,
         f"tags: {render_list(tags)}" if tags else None,
+        f"categories: {render_list([category])}" if category else None,
         "status: Planned",
         "---",
     ]
@@ -193,6 +377,92 @@ def make_slug(row: dict) -> str:
     if row.get("id"):
         return f"book-{row['id']}"
     return safe_slug(row.get("title", "book"))
+
+
+def normalize(text: str) -> str:
+    return (text or "").lower()
+
+
+def detect_category(title: str, tags: list[str], comments: str) -> str:
+    # 0) Try AI if configured
+    ai_guess = detect_category_ai(title, tags, comments)
+    if ai_guess:
+        return ai_guess
+
+    # 1) Tag-based mapping
+    for tag in tags:
+        mapped = TAG_CATEGORY_HINTS.get(tag.lower())
+        if mapped in ALLOWED_CATEGORIES:
+            return mapped
+
+    # 2) Keyword scan in tags, title, comments
+    text_blob = " ".join(tags + [title, comments or ""]).lower()
+    for category, hints in KEYWORD_HINTS.items():
+        for hint in hints:
+            if hint in text_blob:
+                return category if category in ALLOWED_CATEGORIES else "Uncategorized"
+
+    # 3) Fallback
+    return "Uncategorized"
+
+
+def detect_category_ai(title: str, tags: list[str], comments: str) -> str | None:
+    if not OPENAI_API_KEY:
+        return None
+
+    allowed_list = sorted(ALLOWED_CATEGORIES)
+    prompt = (
+        "You classify books into exactly one of these categories. "
+        "Return only the category name. If unsure, return 'Uncategorized'. "
+        "Definitions: "
+        "Engineering = programming, software, security, cloud, devops, systems, infra, web, SRE. "
+        "Science = math, physics, discrete math, biology, neuroscience, research. "
+        "Business = business, startups, management, finance, strategy. "
+        "Psychology = psychology, cognition, behavior, brain. "
+        "Arts = design, art, music, film, theater. "
+        "Physical Health = fitness, sports, running, training, diet, nutrition, wellness. "
+        "Fiction = novels, stories, literature. "
+        "Nonfiction = biography, memoir, history, essays, reportage. "
+        "Favor Engineering for systems, security, cloud, programming; do not place those in Nonfiction. "
+        f"Allowed: {', '.join(allowed_list)}. "
+        f"Title: {title or 'N/A'}. "
+        f"Tags: {', '.join(tags) if tags else 'None'}. "
+        f"Description: {comments or 'None'}."
+    )
+
+    body = {
+        "model": AI_MODEL,
+        "messages": [
+            {"role": "system", "content": "You classify books into high-level categories."},
+            {"role": "user", "content": prompt},
+        ],
+        "temperature": 0,
+        "max_tokens": 10,
+    }
+
+    req = request.Request(
+        "https://api.openai.com/v1/chat/completions",
+        data=json.dumps(body).encode("utf-8"),
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {OPENAI_API_KEY}",
+        },
+        method="POST",
+    )
+
+    try:
+        with request.urlopen(req, timeout=AI_TIMEOUT) as resp:
+            payload = json.loads(resp.read().decode("utf-8"))
+            content = payload.get("choices", [{}])[0].get("message", {}).get("content", "")
+            guess = (content or "").strip()
+            # Some models might return extra text; take first token by delimiter/newline.
+            guess = re.split(r"[\n,;]", guess)[0].strip()
+            if guess in ALLOWED_CATEGORIES:
+                return guess
+    except Exception:
+        return None
+
+    return None
 
 
 def write_book(row: dict) -> Path:
