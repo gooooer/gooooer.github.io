@@ -1,24 +1,24 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Andrii Gorshnii",
+    "label": "Software Engineer",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
+    "email": "andrii.gorishnii@gmail.com",
+    "phone": "(510) 365-0233",
     "url": "https://alshedivat.github.io/al-folio/",
     "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "address": "10565 Shiny Skies Dr",
+      "postalCode": "NV 89129",
+      "city": "Las Vegas",
       "countryCode": "US",
-      "region": "California"
+      "region": "Nevada"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "X",
+        "username": "gooooer",
+        "url": "https://x.com/gooooer"
       }
     ]
   },
