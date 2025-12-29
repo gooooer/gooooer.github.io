@@ -39,7 +39,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          description: "Systems-level software engineer and architect with 20 years building high-performance, reliable platforms across payments, streaming, embedded hardware, and enterprise systems.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -454,11 +454,6 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/0ae36641-84c3-4250-bb06-796d6d3fc192/";
-            },},{id: "books-а-в-ахо-д-э-хопкрофт-д-д-ульман",
-          title: 'А.В. Ахо, Д.Э.Хопкрофт, Д.Д.Ульман',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/1289ca05-cdb8-4727-bbdc-ba722371dd34/";
             },},{id: "books-автостопом-по-галактике-ресторан-quot-у-конца-вселенной-quot",
           title: 'Автостопом по галактике - Ресторан \&amp;quot;У конца Вселенной\&amp;quot;',
           description: "",
@@ -1325,7 +1320,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/pdf/example_pdf.pdf", "_blank");
+          window.open("/assets/pdf/andrii-gorishnii-resume.pdf", "_blank");
         },
       },{
         id: 'social-email',
