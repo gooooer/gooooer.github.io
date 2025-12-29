@@ -147,6 +147,7 @@ def write_book(row: dict) -> Path:
         f.write("\n\n")
         if body:
             f.write(body)
+        f.write("\n")
 
     return path
 

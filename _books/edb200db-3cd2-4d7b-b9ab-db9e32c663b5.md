@@ -4,4 +4,3 @@ title: "College Algebra"
 author: "Unknown"
 status: Planned
 ---
-

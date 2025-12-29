@@ -5,4 +5,3 @@ author: "Daron Acemoglu , James A. Robinson"
 languages: ["eng"]
 status: Planned
 ---
-
