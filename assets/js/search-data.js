@@ -514,11 +514,6 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/2b7b46b4-fd61-4f52-8503-3cc37a7e34bb/";
-            },},{id: "books-aws-reference-architecture-humanitec",
-          title: 'AWS Reference Architecture Humanitec',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/2cb2757a-4275-4135-9efb-c7a76265f634/";
             },},{id: "books-повелитель-мух",
           title: 'Повелитель мух',
           description: "",
@@ -704,8 +699,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/62112f33-8a55-42ea-97a5-859e40b26769/";
-            },},{id: "books-0132642824-pdf",
-          title: '0132642824.pdf',
+            },},{id: "books-artificial-intelligence-a-modern-approach",
+          title: 'Artificial Intelligence: A Modern Approach',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/63fbe293-d4e0-4db6-bb3c-b8e400714903/";
@@ -809,11 +804,6 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/7ec2e6eb-93a8-4c4a-a74a-9167126df67b/";
-            },},{id: "books-библия-триатлета",
-          title: 'Библия триатлета',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/81e3d15f-5443-4282-8527-a460545620c9/";
             },},{id: "books-zero-trust-networks",
           title: 'Zero Trust Networks',
           description: "",
@@ -1274,11 +1264,6 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/fbc5144e-c8c5-4ab2-8f70-dea30c2aadba/";
-            },},{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
             },},{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
