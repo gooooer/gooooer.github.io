@@ -2,6 +2,7 @@
 layout: book-review
 title: "Думай медленно… Решай быстро"
 author: "Даниэль Канеман"
+cover: assets/img/book_covers/a4b29eca-ee9c-499d-966c-ea89d6a2f7de.jpg
 languages: ["rus"]
 tags: ["Зарубежная", "психология", "Личностный", "рост", "Самосовершенствование"]
 status: Planned

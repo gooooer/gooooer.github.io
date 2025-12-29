@@ -2,6 +2,7 @@
 layout: book-review
 title: "Триумфальная арка"
 author: "Эрих Мария Ремарк"
+cover: assets/img/book_covers/a73b57ac-07db-4cbb-bb5f-7eea57c71cc5.jpg
 languages: ["rus"]
 tags: ["Зарубежная", "классика", "Классическая", "проза"]
 status: Planned

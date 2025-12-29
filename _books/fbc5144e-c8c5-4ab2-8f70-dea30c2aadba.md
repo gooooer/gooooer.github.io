@@ -2,6 +2,7 @@
 layout: book-review
 title: "Маленький Принц"
 author: "Антуан Экзюпери"
+cover: assets/img/book_covers/fbc5144e-c8c5-4ab2-8f70-dea30c2aadba.jpg
 languages: ["rus"]
 status: Planned
 ---

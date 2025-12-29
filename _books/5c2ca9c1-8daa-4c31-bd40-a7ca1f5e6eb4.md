@@ -2,6 +2,7 @@
 layout: book-review
 title: "Автостопом по галактике - Жизнь, Вселенная и все остальное"
 author: "Дуглас Ноэль Адамс"
+cover: assets/img/book_covers/5c2ca9c1-8daa-4c31-bd40-a7ca1f5e6eb4.jpg
 languages: ["rus"]
 status: Planned
 ---
