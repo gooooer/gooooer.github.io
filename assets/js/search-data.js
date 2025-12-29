@@ -504,11 +504,11 @@ ninja.data = [{
           window.open("/feed.xml", "_blank");
         },
       },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
+        id: 'social-x',
+        title: 'X',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.alberteinstein.com/", "_blank");
+          window.open("https://twitter.com/gooooer", "_blank");
         },
       },{
       id: 'light-theme',
