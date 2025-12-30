@@ -32,4 +32,4 @@ I currently work at the intersection of cloud architecture, AI/ML, and large-sca
 
 My long-term goal is to pursue a Ph.D. in biomedical sciences and contribute to longevity-focused and translational research, combining experimental biology with computational modeling and machine intelligence.
 
-Outside of research and engineering, I am an endurance athlete (multiple Ironman finishes) and a volunteer with the Trauma Intervention Program, supporting individuals and families during acute crises.
+Outside of research and engineering, I am an endurance athlete with multiple Ironman finishes and a volunteer with the [Trauma Intervention Program](https://www.tipoflasvegas.org/), supporting individuals and families during acute crises.
